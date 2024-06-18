@@ -26,7 +26,7 @@ function App() {
         <h2>{welcomeMessage}</h2>
         <h4>{isLoggedIn ? "Logged in as Staicy 👩‍💻" : "Logged out 👻"}</h4>
         <div className="buttons-container">
-          <div className="💪">
+          <div className="flex-container">
             <button onClick={() => handleLanguageChange("en")}>
               Switch to English 🇺🇸
             </button>
@@ -34,7 +34,7 @@ function App() {
               Switch to German 🇩🇪
             </button>
           </div>
-          <div className="💪">
+          <div className="flex-container">
             <button onClick={() => handleLoginStatusChange(true)}>
               Log in as yourself
             </button>
