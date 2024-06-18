@@ -22,28 +22,30 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h2>{welcomeMessage}</h2>
-        <h4>{isLoggedIn ? "Logged in as Staicy 👩‍💻" : "Logged out 👻"}</h4>
-        <div className="buttons-container">
-          <div className="flex-container">
-            <button onClick={() => handleLanguageChange("en")}>
-              Switch to English 🇺🇸
-            </button>
-            <button onClick={() => handleLanguageChange("de")}>
-              Switch to German 🇩🇪
-            </button>
-          </div>
-          <div className="flex-container">
-            <button onClick={() => handleLoginStatusChange(true)}>
-              Log in as yourself
-            </button>
-            <button onClick={() => handleLoginStatusChange(false)}>
-              Log out
-            </button>
-          </div>
-        </div>
+      <header>
+        <nav>{isLoggedIn ? "👩‍💻" : "🐨"}</nav>
       </header>
+      <h2>{welcomeMessage}</h2>
+      <h4>{isLoggedIn ? "Logged in as Staicy 👩‍💻" : "Logged out 👻"}</h4>
+      <div className="buttons-container">
+        <div className="flex-container">
+          <button onClick={() => handleLanguageChange("en")}>
+            Switch to English 🇺🇸
+          </button>
+          <button onClick={() => handleLanguageChange("de")}>
+            Switch to German 🇩🇪
+          </button>
+        </div>
+        <div className="flex-container">
+          <button onClick={() => handleLoginStatusChange(true)}>
+            Log in as yourself
+          </button>
+          <button onClick={() => handleLoginStatusChange(false)}>
+            Log out
+          </button>
+        </div>
+      </div>
+
       <div className="like-button">
         <h3>Preference Button 🤔</h3>
         <button onClick={handleLikeToggle}>
